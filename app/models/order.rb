@@ -10,4 +10,7 @@ class Order < ActiveRecord::Base
       line_items << item
     end
   end
+
+  cattr_reader :per_page
+  @@per_page = 10
 end
