@@ -46,4 +46,11 @@ class CartsControllerTest < ActionController::TestCase
 
     assert_redirected_to store_path
   end
+
+  test "ajax destroy cart" do
+    assert_difference("Cart.count", -1) do
+      xhr :post, :destroy, :id => @cart.to_param
+    end
+    assert_response :success
+  end
 end

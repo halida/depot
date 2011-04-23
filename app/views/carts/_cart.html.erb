@@ -7,6 +7,4 @@
   </tr>
 </table>
 
-<%= button_to 'empty cart', @cart, :method => :delete, :confirm => 'are you sure?' %>
-
-<%= link_to 'Back', store_index_path %>
+<%= button_to 'empty cart', @cart, :method => :delete, :remote=> true, :confirm => 'are you sure?' %>
