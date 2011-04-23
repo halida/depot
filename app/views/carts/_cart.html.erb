@@ -7,4 +7,5 @@
   </tr>
 </table>
 
+<%= button_to "checkout", new_order_url, :method=>:get %>
 <%= button_to 'empty cart', @cart, :method => :delete, :remote=> true, :confirm => 'are you sure?' %>
